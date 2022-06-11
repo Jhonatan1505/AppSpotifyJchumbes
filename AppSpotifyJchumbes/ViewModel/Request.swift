@@ -10,14 +10,19 @@ import Foundation
 class Request {
     
     let token =
-        "BQAyEIy84RdXq5nCBKGAzu7W9xui8OUqEf8iDroA2pmWYD_nxlhTEwOVio6rtb88l65QLi1rX0KlzM12vlJEsgeS5djECKSA3idPuDjfhBB52e3V3LsM2e900HDfFboCs684GX_tFRTMmnO90GEOnFXD2fIh1s2RXt5ciO3DQA52tT-fS0JjIA"
+        "BQAfw2dGThoG3NdjbZzizcmITb4iKXhgQIeSQ_PNf3beNOD-shh2Z3OusQUTibCplX4M6Hex-BMAakHni9vDIyFzuUneXzmrgfvEGgAzHVYHcPPrcPmHnEoQrivnC0g05bDWLnmx36hzYoXSwPWK7yBLcJ3CIGkKTHXStSo6rN_YlSGSz2Yi_A"
     
     let BASE_URL =
         "https://api.spotify.com/v1/"
     
     func getDataFromAPI(url: String) async -> Data? {
         do {
-            var request = URLRequest(url: HelperString.getURLFromString(url: "\(BASE_URL)\(url)")!)
+            
+            let parseURL = url
+                .replacingOccurrences(of: " ", with: "%20")
+                .replacingOccurrences(of: "ñ", with: "n")
+            
+            var request = URLRequest(url: HelperString.getURLFromString(url: "\(BASE_URL)\(parseURL)")!)
             request.httpMethod = "GET"
             request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
             

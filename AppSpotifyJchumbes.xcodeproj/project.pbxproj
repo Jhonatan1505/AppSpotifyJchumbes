@@ -20,6 +20,10 @@
 		3B30BA2E284BE9A700D8F8C9 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3B30BA2D284BE9A700D8F8C9 /* FirebaseDatabase */; };
 		3B30BA30284BE9A700D8F8C9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3B30BA2F284BE9A700D8F8C9 /* FirebaseFirestore */; };
 		3B30BA32284BE9A700D8F8C9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3B30BA31284BE9A700D8F8C9 /* FirebaseStorage */; };
+		3B30BA34284C23B400D8F8C9 /* ItemSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B30BA33284C23B400D8F8C9 /* ItemSearchTableViewCell.swift */; };
+		3B30BA36284C240600D8F8C9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B30BA35284C240600D8F8C9 /* HomeViewController.swift */; };
+		3B30BA38284C2AE600D8F8C9 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B30BA37284C2AE600D8F8C9 /* Search.swift */; };
+		3B30BA3A284C2F2200D8F8C9 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B30BA39284C2F2200D8F8C9 /* SearchViewModel.swift */; };
 		3B46D383283AF919008EBB30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B46D382283AF919008EBB30 /* AppDelegate.swift */; };
 		3B46D385283AF919008EBB30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B46D384283AF919008EBB30 /* SceneDelegate.swift */; };
 		3B46D387283AF919008EBB30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B46D386283AF919008EBB30 /* ViewController.swift */; };
@@ -63,6 +67,10 @@
 		3B30BA1F2848173F00D8F8C9 /* PlaylistDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailViewController.swift; sourceTree = "<group>"; };
 		3B30BA2128482C1400D8F8C9 /* ItemPlaylistDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPlaylistDetailTableViewCell.swift; sourceTree = "<group>"; };
 		3B30BA28284BDF9000D8F8C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3B30BA33284C23B400D8F8C9 /* ItemSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSearchTableViewCell.swift; sourceTree = "<group>"; };
+		3B30BA35284C240600D8F8C9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3B30BA37284C2AE600D8F8C9 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		3B30BA39284C2F2200D8F8C9 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		3B46D37F283AF919008EBB30 /* AppSpotifyJchumbes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppSpotifyJchumbes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B46D382283AF919008EBB30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B46D384283AF919008EBB30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				3B30BA2128482C1400D8F8C9 /* ItemPlaylistDetailTableViewCell.swift */,
+				3B30BA33284C23B400D8F8C9 /* ItemSearchTableViewCell.swift */,
 			);
 			path = ViewCell;
 			sourceTree = "<group>";
@@ -185,6 +194,7 @@
 			children = (
 				3B46D3C0283C6FC3008EBB30 /* PlayList.swift */,
 				3B30BA14284586C900D8F8C9 /* PlayListDetail.swift */,
+				3B30BA37284C2AE600D8F8C9 /* Search.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,6 +205,7 @@
 				3B46D386283AF919008EBB30 /* ViewController.swift */,
 				3B46D3C8283C8533008EBB30 /* LibraryViewController.swift */,
 				3B30BA1F2848173F00D8F8C9 /* PlaylistDetailViewController.swift */,
+				3B30BA35284C240600D8F8C9 /* HomeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -205,6 +216,7 @@
 				3B46D3C2283C70E0008EBB30 /* Request.swift */,
 				3B46D3C4283C7672008EBB30 /* PlayListViewModel.swift */,
 				3B30BA1B2845893100D8F8C9 /* PlatlistDetailViewModel.swift */,
+				3B30BA39284C2F2200D8F8C9 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -387,14 +399,18 @@
 				3B46D387283AF919008EBB30 /* ViewController.swift in Sources */,
 				3B30BA15284586C900D8F8C9 /* PlayListDetail.swift in Sources */,
 				3B30BA202848173F00D8F8C9 /* PlaylistDetailViewController.swift in Sources */,
+				3B30BA38284C2AE600D8F8C9 /* Search.swift in Sources */,
 				3B30BA132845868800D8F8C9 /* GradientView.swift in Sources */,
+				3B30BA3A284C2F2200D8F8C9 /* SearchViewModel.swift in Sources */,
 				3B30BA2228482C1400D8F8C9 /* ItemPlaylistDetailTableViewCell.swift in Sources */,
 				3B46D3BB283AFE15008EBB30 /* Spotify+Image.swift in Sources */,
 				3B46D383283AF919008EBB30 /* AppDelegate.swift in Sources */,
 				3B46D3C1283C6FC3008EBB30 /* PlayList.swift in Sources */,
 				3B46D3C3283C70E0008EBB30 /* Request.swift in Sources */,
 				3B46D385283AF919008EBB30 /* SceneDelegate.swift in Sources */,
+				3B30BA36284C240600D8F8C9 /* HomeViewController.swift in Sources */,
 				3B30BA1C2845893100D8F8C9 /* PlatlistDetailViewModel.swift in Sources */,
+				3B30BA34284C23B400D8F8C9 /* ItemSearchTableViewCell.swift in Sources */,
 				3B46D3C9283C8533008EBB30 /* LibraryViewController.swift in Sources */,
 				3B46D3B9283AFDDF008EBB30 /* Spotify+String.swift in Sources */,
 			);
